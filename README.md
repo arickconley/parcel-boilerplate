@@ -14,7 +14,7 @@ An amazing, "zero" config bundler with a ton of functionality out of the box, in
 Plugins used:
 
 - parcel-plugin-clean-dist
-- parcel-plugin-imageminß
+- parcel-plugin-imagemin
 
 #### PostCSS
 
@@ -96,8 +96,6 @@ $ yarn prod-share
 ```
 
 Builds your project for production and launches browsersync to serve your production build.
-
-## PostHTML console spam
 
 ## Checkout these fine folks!
 
