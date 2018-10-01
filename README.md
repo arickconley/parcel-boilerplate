@@ -28,7 +28,7 @@ All the juicy new CSS features, with JS plugins. Plugins used in this boilerplat
 
 Gives you the ability to transform HTML with JS plugins. This boilerplate includes the "posthtml-include" plugin, allowing you to use the
 
-```
+```html
 <include src="path/to/component.html"></include>
 ```
 
@@ -38,48 +38,66 @@ tag to import HTML components.
 
 Clone/Fork this repo
 
-```
+```s
 $ git clone https://github.com/arickconley/parcel-boilerplate.git project-folder
 $ cd project-folder
 ```
 
 Install the dependencies
 
-```
+```s
 $ yarn
 ```
 
 or
 
-```
+```s
 $ npm i
 ```
+
+PostHTML squawks about "addDependencyTo" being deprecated. To get rid of it, run the following in your console:
+
+```s
+sed -e '20,24d;' node_modules/posthtml-include/index.js
+```
+
+This basically just deletes lines 20-24 from the postHTML file. This is the easiest solution I could figure out.
 
 ## Commands
 
 ### Start
 
-```
+```s
 $ yarn start
 ```
 
-Runs parcel on "src/index.html", starts a development server, and opens up a tunnel to outside world with [serveo](https://serveo.net).
+Runs parcel on "src/index.html" and starts a development server at [localhost:1234](http://localhost:1234).
 
-### Serve
+### Tunnel
 
+```s
+$ yarn run tunnel
 ```
-$ yarn run serve
-```
 
-Runs parcel on "src/index.html" and starts a development server at "localhost:1234"
+Runs parcel on "src/index.html", starts a development server at "localhost:1234", and opens up a tunnel to outside world with [serveo](https://serveo.net).
 
 ### Build
 
-```
+```s
 $ yarn run build
 ```
 
 Builds your project for production, outputting to the "dist" directory.
+
+### Production Share
+
+```s
+$ yarn prod-share
+```
+
+Builds your project for production and launches browsersync to serve your production build.
+
+## PostHTML console spam
 
 ## Checkout these fine folks!
 
