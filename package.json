@@ -4,9 +4,9 @@
   "description": "Boilerplate - PostCSS with Sugarss syntax with Parcel.",
   "main": "index.js",
   "scripts": {
-    "start": "concurrently -p \"[{name}]\" -n \"Parcel,Tunnel\" -c \"bgBlue.bold,bgGreen.bold\" \"yarn run serve\" \"yarn run tunnel\"",
+    "start": "parcel src/index.html",
     "tunnel": "ssh -R 80:localhost:1234 serveo.net",
-    "serve": "parcel src/index.html",
+    "serve": "concurrently -p \"[{name}]\" -n \"Parcel,Tunnel\" -c \"bgBlue.bold,bgGreen.bold\" \"yarn run serve\" \"yarn run tunnel\"",
     "build": "parcel build src/index.html"
   },
   "author": "",
@@ -17,6 +17,7 @@
   "devDependencies": {
     "concurrently": "^4.0.1",
     "parcel-plugin-clean-dist": "0.0.6",
+    "parcel-plugin-imagemin": "^2.1.1",
     "postcss-modules": "^1.4.1",
     "postcss-nested": "^4.1.0",
     "posthtml-include": "^1.2.0",
