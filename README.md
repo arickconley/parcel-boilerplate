@@ -38,26 +38,26 @@ tag to import HTML components.
 
 Clone/Fork this repo
 
-```s
+```zsh
 $ git clone https://github.com/arickconley/parcel-boilerplate.git project-folder
 $ cd project-folder
 ```
 
 Install the dependencies
 
-```s
+```zsh
 $ yarn
 ```
 
 or
 
-```s
+```zsh
 $ npm i
 ```
 
 PostHTML squawks about "addDependencyTo" being deprecated. To get rid of it, run the following in your console:
 
-```s
+```zsh
 sed -e '20,24d;' node_modules/posthtml-include/index.js
 ```
 
@@ -67,7 +67,7 @@ This basically just deletes lines 20-24 from the postHTML file. This is the easi
 
 ### Start
 
-```s
+```zsh
 $ yarn start
 ```
 
@@ -75,7 +75,7 @@ Runs parcel on "src/index.html" and starts a development server at [localhost:12
 
 ### Tunnel
 
-```s
+```zsh
 $ yarn run tunnel
 ```
 
@@ -83,7 +83,7 @@ Runs parcel on "src/index.html", starts a development server at "localhost:1234"
 
 ### Build
 
-```s
+```zsh
 $ yarn run build
 ```
 
@@ -91,7 +91,7 @@ Builds your project for production, outputting to the "dist" directory.
 
 ### Production Share
 
-```s
+```zsh
 $ yarn prod-share
 ```
 
