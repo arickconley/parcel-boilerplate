@@ -1,3 +1,4 @@
-const container = document.querySelector('.container');
-const dynamic = document.createTextNode('Appended from JS. Parcel works!');
-container.appendChild(dynamic);
+import md from '~/pages/testing.md';
+const markdown = document.querySelector('.markdown');
+
+markdown.innerHTML = md;

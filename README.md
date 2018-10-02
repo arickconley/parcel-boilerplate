@@ -46,19 +46,19 @@ $ cd project-folder
 Install the dependencies
 
 ```zsh
+$ ## use yarn
 $ yarn
-```
-
-or
-
-```zsh
+$ ## use npm
 $ npm i
 ```
 
 PostHTML squawks about "addDependencyTo" being deprecated. To get rid of it, run the following in your console:
 
 ```zsh
-sed -e '20,24d;' node_modules/posthtml-include/index.js
+$ ## use yarn
+$ yarn fix
+$ ## use npm
+$ npm run fix
 ```
 
 This basically just deletes lines 20-24 from the postHTML file. This is the easiest solution I could figure out.
@@ -79,7 +79,15 @@ Runs parcel on "src/index.html" and starts a development server at [localhost:12
 $ yarn run tunnel
 ```
 
-Runs parcel on "src/index.html", starts a development server at "localhost:1234", and opens up a tunnel to outside world with [serveo](https://serveo.net).
+Opens up a tunnel to outside world with [serveo](https://serveo.net).
+
+### Serve
+
+```zsh
+$ yarn serve
+```
+
+Combines the "start" and "tunnel" scripts in one. Launches a dev server, and exposes it to the internet with a tunnel.
 
 ### Build
 

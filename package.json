@@ -8,21 +8,29 @@
     "tunnel": "ssh -R 80:localhost:1234 serveo.net",
     "serve": "concurrently -p \"[{name}]\" -n \"Parcel,Tunnel\" -c \"bgBlue.bold,bgGreen.bold\" \"yarn run serve\" \"yarn run tunnel\"",
     "build": "rm -rf dist && parcel build src/index.html",
-    "prod-share": "rm -rf dist && yarn build && browser-sync dist -w"
+    "prod-share": "rm -rf dist && yarn build && browser-sync dist -w",
+    "fix": "yes | cp -f .posthtmlfix node_modules/posthtml-include/index.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "components": "^0.1.0",
+    "pages": "^0.0.16",
     "parcel-bundler": "^1.10.1"
   },
   "devDependencies": {
     "browser-sync": "^2.24.7",
     "concurrently": "^4.0.1",
+    "marked": "^0.5.1",
     "parcel-plugin-clean-dist": "0.0.6",
     "parcel-plugin-imagemin": "^2.1.1",
+    "parcel-plugin-md": "^1.0.1",
     "postcss-modules": "^1.4.1",
     "postcss-nested": "^4.1.0",
     "posthtml-include": "^1.2.0",
     "sugarss": "^2.0.0"
+  },
+  "marked": {
+    "breaks": true
   }
 }
