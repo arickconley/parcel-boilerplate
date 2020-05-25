@@ -21,7 +21,7 @@
   "devDependencies": {
     "browser-sync": "^2.24.7",
     "concurrently": "^4.0.1",
-    "marked": "^0.5.1",
+    "marked": "^0.6.1",
     "parcel-plugin-clean-dist": "0.0.6",
     "parcel-plugin-imagemin": "^2.1.1",
     "parcel-plugin-md": "^1.0.1",
